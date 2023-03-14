@@ -464,9 +464,9 @@ from django.contrib.auth import get_user_model
 # c180 = Carmodel.objects.get(name = "C180")
 # c200 = Carmodel.objects.get(name = "C200")
 
-gas = FuelType.objects.get(name = "Gas")
-diseal = FuelType.objects.get(name = "Diseal")
-hybrid = FuelType.objects.get(name = "Hybrid")
+# gas = FuelType.objects.get(name = "Gas")
+# diseal = FuelType.objects.get(name = "Diseal")
+# hybrid = FuelType.objects.get(name = "Hybrid")
 
 # c180.fueltype.add(gas)
 # c180.fueltype.add(diseal, hybrid)#...add more fuel type
@@ -516,8 +516,8 @@ from django.db import connection
 
 
 
-SECOND_DATABASE = "second_db"
-print(Student.objects.using(SECOND_DATABASE).all())
+# SECOND_DATABASE = "second_db"
+# print(Student.objects.using(SECOND_DATABASE).all())
 
 
 #c1 = College.objects.using(SECOND_DATABASE).create(name = "Bajaj", adr = "Wardha")
@@ -527,3 +527,13 @@ print(Student.objects.using(SECOND_DATABASE).all())
 # eate(name = "Gauri", marks = 75, age = 20, department = d1)
 # s2 = Student.objects.using(SECOND_DATABASE).create(name = "payal", marks = 85, age = 24, department = d1)
 # subj1 = Subjects.objects.using(SECOND_DATABASE).create(name = "control system", is_practical = True, dept = d1)
+
+
+
+class method():
+    print("init method")
+
+    def __str__(self):
+        return self
+    
+    
